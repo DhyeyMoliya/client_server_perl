@@ -33,19 +33,3 @@ close(FH);
 
 }
 
-
-#socket(SERV, PF_INET, SOCK_STREAM, getprotobyname('tcp')) || die $!;
-
-#my $sin = sockaddr_in (5000,inet_aton('127.0.1.1'));
-#connect(SH,$sin) || die $!;
-
-#$buffer="hello !";
-#syswrite(FH, $buffer, length($buffer));
-
-#select(FH);
-#$|=1;                # set $| to non-zero to make selection autoflushed
-#print FH "hello world!";
-#sysread(FH, $buffer, 200);  # read at most 200 bytes from FH
-
-
-#$buffer = <FH>;
