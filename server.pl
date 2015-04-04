@@ -31,15 +31,8 @@ print "Write your message : ";
 $buffer= <>;
 syswrite(FH, $buffer, length($buffer));
 
-#select(FH);
-#$|=1;                # set $| to non-zero to make selection autoflushed
-#print FH "hello world!";
-
-#print $_ while (<FH>);
-
 sysread(FH, $buff, 200);  # read at most 200 bytes from FH
 print "Message from client : $buff";
-#$buffer = <FH>;
 
 close(SERV);
 
